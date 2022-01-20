@@ -1,4 +1,4 @@
-# Unit 20 - "Looks like we've made our First Contract!"
+# Blockchain - Introduction to Solidity
 
 ![contract](Images/smart-contract.png)
 
@@ -22,15 +22,6 @@ Fortunately, you've been learning how to program smart contracts with Solidity! 
 
 * [`DeferredEquityPlan.sol`](Starter-Code/DeferredEquityPlan.sol) -- Level 3 starter code.
 
-## Instructions
-
-This assignment has three levels of difficulty, with each contract increasing in complexity and capability. Although it is highly recommended you complete all three contracts, you are only required to solve one of the three contracts. Recommended to start with Level 1, then move forward as you complete the challenges. You can build all three with the skills you already have!
-
-* **Level One** is an `AssociateProfitSplitter` contract. This will accept Ether into the contract and divide the Ether evenly among the associate level employees. This will allow the Human Resources department to pay employees quickly and efficiently.
-
-* **Level Two** is a `TieredProfitSplitter` that will distribute different percentages of incoming Ether to employees at different tiers/levels. For example, the CEO gets paid 60%, CTO 25%, and Bob gets 15%.
-
-* **Level Three** is a `DeferredEquityPlan` that models traditional company stock plans. This contract will automatically manage 1000 shares with an annual distribution of 250 over 4 years for a single employee.
 
 ### Starting your project
 
@@ -88,7 +79,7 @@ Test the `deposit` function by sending various values. Keep an eye on the `emplo
 
 ![Remix Testing](Images/remix-test.png)
 
-### Level Two: The `TieredProfitSplitter` Contract
+### The `TieredProfitSplitter` Contract
 
 In this contract, rather than splitting the profits between Associate-level employees, you will calculate rudimentary percentages for different tiers of employees (CEO, CTO, and Bob).
 
@@ -126,7 +117,7 @@ Using the starter code, within the `deposit` function, perform the following:
 
   * Note: The 100 wei threshold is due to the way we calculate the points. If we send less than 100 wei, for example, 80 wei, `points` would equal `0` because `80 / 100` equals `0` because the remainder is discarded. We will learn more advanced arbitrary precision division later in the course. In this case, we can disregard the threshold as 100 wei is a significantly smaller value than the Ether or Gwei units that are far more commonly used in the real world (most people aren't sending less than a penny's worth of Ether).
 
-### Level Three: The `DeferredEquityPlan` Contract
+### The `DeferredEquityPlan` Contract
 
 In this contract, we will be managing an employee's "deferred equity incentive plan" in which 1000 shares will be distributed over 4 years to the employee. We won't need to work with Ether in this contract, but we will be storing and setting amounts that represent the number of distributed shares the employee owns and enforcing the vetting periods automatically.
 
@@ -208,10 +199,3 @@ For a more extensive list of awesome Solidity resources, checkout [Awesome Solid
 Another tutorial is available at [EthereumDev.io](https://ethereumdev.io/)
 
 If you enjoy building games, here's an excellent tutorial called [CryptoZombies](https://cryptozombies.io/)
-
-## Submission
-
-Create a `README.md` that explains how each of the contracts work and what the motivation for each of the contracts is. Also, please provide screenshots to illustrate the functionality (e.g. how you send transactions, how the transferred amount is then distributed by each of the contracts, and how the timelock functionality can be tested with the `fastforward` function). Alternatively, you can also record your interactions with the contract as a gif (e.g. https://www.screentogif.com/)
-
-
-Upload the `README.md` to a Github repository and provide the testnet address for others to interact with the contract.
